@@ -92,5 +92,5 @@ jobs:
             else:
                 print(f"Failed to trigger wf. Status code: {response.status_code}, Response: {response.text}")
 
-          get_github_wf
-          trigger_github_wf
+          get_github_wf()
+          trigger_github_wf()
