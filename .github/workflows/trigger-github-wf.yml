@@ -58,11 +58,12 @@ jobs:
         
             # Send a POST request to create the webhook
             response = requests.get(api_endpoint, headers=headers, data=data)
+            print("*** printing response of  the get action: `n")
             print(response)
         
             # Check the response
             if (response.status_code == 201 or response.status_code == 200 ):
-                print("get wf action completed successfully!")
+                print(f"get wf action completed successfully! with Status code: {response.status_code}")
             else:
                 print(f"Failed to get github wf. Status code: {response.status_code}, Response: {response.text}")
                 
