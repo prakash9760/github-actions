@@ -44,6 +44,7 @@ jobs:
           
           def get_github_wf ():
             # Set the repository and event type for the webhook
+            print("started executing get workflow action...")
             repository = "dev"
             event_type = "repo"
         
@@ -61,12 +62,13 @@ jobs:
         
             # Check the response
             if (response.status_code == 201 or response.status_code == 200 ):
-                print("Webhook created successfully!")
+                print("get wf action completed successfully!")
             else:
-                print(f"Failed to get github actions. Status code: {response.status_code}, Response: {response.text}")
+                print(f"Failed to get github wf. Status code: {response.status_code}, Response: {response.text}")
                 
           def trigger_github_wf ():
-            # Set the repository and event type for the webhook
+            # Set the repository and event type for the trigger
+            print("started with executing workflow...")
             repository = "dev"
             event_type = "repo"
             owner = "prakash9760"
